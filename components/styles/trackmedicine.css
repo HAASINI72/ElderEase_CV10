@@ -1,0 +1,161 @@
+/* FULLSCREEN CENTER */
+.track-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.track-wrapper.dark {
+  background: linear-gradient(to right, #1f1f2f, #2b2b3c);
+}
+
+/* CARD */
+.track-card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+.track-wrapper.dark .track-card {
+  background: #2e3a4f;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #0077cc;
+}
+
+.track-wrapper.dark h2 {
+  color: #90caff;
+}
+
+/* FORM INPUTS */
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #cce0f5;
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  transition: border 0.3s ease;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  font-size: 15px;
+  color: #888;
+  background: white;
+  padding: 0 6px;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.form-group.filled label,
+.form-group input:focus + label,
+.form-group textarea:focus + label {
+  top: -10px;
+  font-size: 12px;
+  color: #0077cc;
+}
+
+.track-wrapper.dark .form-group input,
+.track-wrapper.dark .form-group textarea {
+  background-color: #3a4a60;
+  color: white;
+  border-color: #74b9ff;
+}
+
+.track-wrapper.dark .form-group label {
+  background: #2e3a4f;
+}
+
+.track-wrapper.dark .form-group.filled label,
+.track-wrapper.dark .form-group input:focus + label,
+.track-wrapper.dark .form-group textarea:focus + label {
+  color: #74b9ff;
+}
+
+/* BUTTONS */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #4a90e2, #0077ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #5aaaff, #005fcc);
+}
+
+.back-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #0077cc;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.back-btn:hover {
+  color: #005599;
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.track-wrapper.dark .dark-toggle {
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,122 @@
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.login-wrapper.dark {
+  background: linear-gradient(to right, #1e1e2f, #2b2b3c);
+}
+
+.login-card {
+  width: 360px;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.login-wrapper.dark .login-card {
+  background: #2e3a4f;
+  color: white;
+}
+
+.dark-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-wrapper.dark .dark-toggle {
+  color: #ccc;
+}
+
+h2 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 25px;
+}
+
+.login-wrapper.dark h2 {
+  color: #90caff;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  font-size: 16px;
+  color: #999;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.input-group.filled label,
+.input-group input:focus + label {
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 6px;
+  font-size: 12px;
+  color: #0077ff;
+}
+
+.login-wrapper.dark .input-group.filled label,
+.login-wrapper.dark .input-group input:focus + label {
+  background: #2e3a4f;
+  color: #74b9ff;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.login-button {
+  width: 100%;
+  background: linear-gradient(to right, #4a90e2, #0077ff);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #5aaaff, #0066cc);
+}
